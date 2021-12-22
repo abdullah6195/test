@@ -509,7 +509,15 @@
             // t tablo, p pagination, f arama kutusu, l sayfada gösterilecek veriyi seçme kutusu
             // Bu harfleri rastgele şekilde yazarak tablonun görünüm şeklini değiştirebilirsiniz ya da kaldırarak o özelliği görünmez yapabilirsiniz
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+                'copy', 'csv', 'print',
+                {
+                    extend: 'pdf',
+                    title: 'PdfDosyaAdı'
+                },
+                {
+                    extend: 'excel',
+                    title: 'ExcelDosyaAdı'
+                }
             ],
             columnDefs: [ // Sütun varsayılan ayarlarını değiştirebiliriz
                 {
@@ -544,7 +552,7 @@
                 console.log('Datatables güncellendi')
             } // Datatable her güncellendiğinde çalışan fonksiyon, ilk açılışta da tablo güncellendiği için ilk açılışta da çalışır
         })
-        
+
         // Bütün ayarların lsitesi için https://datatables.net/reference/option/
     });
 </script>
